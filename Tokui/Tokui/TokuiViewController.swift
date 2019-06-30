@@ -9,7 +9,7 @@
 import UIKit
 
 
-public enum MessageLocation
+public enum MessagePosition
 {
     case above
     case below
@@ -23,10 +23,10 @@ open class TokuiViewController: UIPageViewController  {
     public var magnification : CGFloat
     public var alpha : CGFloat
     public var font : UIFont
-    
+    public var pages: [UIViewController] = []
+    public var pageControlPosition : CGPoint
     
     private var pageControl: UIPageControl!
-    private var pages: [UIViewController] = []
     private var firstPage : UIViewController? = nil
     private var endPage : UIViewController? = nil
     
@@ -39,18 +39,29 @@ open class TokuiViewController: UIPageViewController  {
     
     /// - Parameters:
     ///   - displayDots: whether UIPageControl(Page Dots) is shown or not.
-    public init(magnification : CGFloat = 1.2 , alpha: CGFloat = 0.5 , font : UIFont = UIFont.systemFont(ofSize: 18.0) ,displayDots : Bool = true)
+    public init(magnification : CGFloat = 1.2 , alpha: CGFloat = 0.5 , font : UIFont = UIFont.systemFont(ofSize: 18.0) ,displayDots : Bool = true ,pageControlPosition: CGPoint? = nil)
     {
         let t = UIPageViewController.TransitionStyle.scroll
         let n = UIPageViewController.NavigationOrientation.horizontal
+        let ini = CGPoint(x:0,y:0)
         
         self.magnification = magnification
         self.alpha = alpha
         self.font = font
+        self.pageControlPosition = ini
         
         super.init(transitionStyle: t, navigationOrientation: n, options: nil)
         
-        PreparePageControl()
+        if pageControlPosition == nil
+        {
+            self.pageControlPosition = CGPoint(x: 0, y: self.view.frame.height - 50)
+        }
+        else
+        {
+            self.pageControlPosition = pageControlPosition!
+        }
+        
+        PreparePageControl(position: self.pageControlPosition)
         pageControl.isHidden = !displayDots
     }
     
@@ -85,8 +96,8 @@ open class TokuiViewController: UIPageViewController  {
 
     /// - Parameters:
     ///   - target: the object you want to focus
-    ///   - location: where message is displayed
-    public func add(target: UIView , message: String , magnification : CGFloat = 1.2, font: UIFont? = nil ,textColor : UIColor = .white , location: MessageLocation = .auto)
+    ///   - position: where message is displayed
+    public func add(target: UIView , message: String , magnification : CGFloat = 1.2, font: UIFont? = nil ,textColor : UIColor = .white , position: MessagePosition = .auto)
     {
         self.modalPresentationStyle = .overCurrentContext
         
@@ -99,7 +110,7 @@ open class TokuiViewController: UIPageViewController  {
                                             message,
                                             (font == nil ? self.font : font!),
                                             textColor,
-                                            location)
+                                            position)
         
         page.view.addSubview(description)
         
@@ -192,7 +203,7 @@ open class TokuiViewController: UIPageViewController  {
     
     // MARK: - Description Label Layout
     
-    public func createDescription(_ target: UIView , _ message: String , _ font: UIFont ,_ textColor :UIColor , _ location: MessageLocation) ->UILabel
+    public func createDescription(_ target: UIView , _ message: String , _ font: UIFont ,_ textColor :UIColor , _ position: MessagePosition) ->UILabel
     {
         var point : CGPoint = CGPoint(x: 0,y: 0)
         var pointsPattern : [CGPoint] = []
@@ -204,7 +215,6 @@ open class TokuiViewController: UIPageViewController  {
         let radius = (width > height ?  width/2 : height/2) * magnification
         
         let label = UILabel()
-        label.textColor = .white
         label.font = font
         label.textColor = textColor
         label.textAlignment = .center
@@ -229,13 +239,13 @@ open class TokuiViewController: UIPageViewController  {
         pointsPattern.append(point4left)
         
         
-        if location == .auto
+        if position == .auto
         {
             //below→above→right→left
             point = point4below
             for p in pointsPattern
             {
-                let X = p.x + label.frame.width/2
+                let X = p.x + label.frame.width
                 let Y = p.y + label.frame.height
                 if  X <= self.view.frame.width && Y <= self.view.frame.height
                 {
@@ -246,7 +256,7 @@ open class TokuiViewController: UIPageViewController  {
         }
         else
         {
-            switch location
+            switch position
             {
             case .below:
                 point = point4below
@@ -265,9 +275,9 @@ open class TokuiViewController: UIPageViewController  {
     }
     
     // MARK: - PageControl
-    private func PreparePageControl()
+    private func PreparePageControl(position : CGPoint)
     {
-        pageControl = UIPageControl(frame: CGRect(x:0, y:self.view.frame.height - 100, width:self.view.frame.width, height:50))
+        pageControl = UIPageControl(frame: CGRect(x:position.x, y:position.y, width:self.view.frame.width, height:50))
         pageControl.backgroundColor = .clear
         
         pageControl.currentPage = 0

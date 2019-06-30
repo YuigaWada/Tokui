@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Tap(_ sender: Any) {
-        let Tokui = TokuiViewController(alpha:0.8 , displayDots:false)
+        let Tokui = TokuiViewController(alpha:0.8 , displayDots:true)
 
-        Tokui.add(target: button , message:"You tapped here." , location: .above)
+        Tokui.add(target: button , message:"You tapped here." , position: .above)
         Tokui.add(target: TokuiLabel , message:"Tokui is a comedian of the \n Japanese comedy duo \'Tutorial\'.")
         
         Tokui.PreparePages()

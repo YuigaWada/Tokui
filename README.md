@@ -1,11 +1,14 @@
 # Tokui
 [![Swift Version][swift-image]][swift-url]
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License][license-image]][license-url]
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)
+<!-- [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+-->[![License][license-image]][license-url]
 
 Tokui is a library with a ready to use tutorial screen that lights items, written in Swift.
 
+
+
+## Preview
 <img src="image.gif" width=30%>
 
 ## Installation
@@ -22,12 +25,13 @@ To get the full benefits,  import `Tokui`
 ``` swift
 import Tokui
 ```
+<!--
 #### Carthage
 Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/Tokui.framework` to an iOS project.
 
 ```
 github "YuigaWada/Tokui"
-```
+```-->
 #### Manually
 1. Download and drop ```Tokui``` in your project.  
 2. Congratulations!  
@@ -37,17 +41,27 @@ github "YuigaWada/Tokui"
 ```swift
 import Tokui
 
-let tki = TokuiViewController()
+let tokui = TokuiViewController()
 
 //Lighting target Items
-tki.add(target: button , message:"You tapped here." , location: .above)
-tki.add(target: label , message:"Tokui is a comedian of the Japanese comedy duo Tutorial.")
+tokui.add(target: button , message:"You tapped here." , location: .above)
+tokui.add(target: label , message:"Tokui is a comedian of the Japanese comedy duo Tutorial.")
 
-tki.PreparePages()
+tokui.PreparePages()
 
-tki.modalTransitionStyle = .crossDissolve
-self.present(tki, animated: true, completion: nil)
+tokui.modalTransitionStyle = .crossDissolve
+self.present(tokui, animated: true, completion: nil)
 ```
+
+## Usage
+Tokui is very simple.
+
+### Lighting items
+```swift
+tokui.add(target: button , message:"You tapped here." , location: .above)
+tokui.add(target: label , message:"Tokui is a comedian of the Japanese comedy duo Tutorial.")
+```
+
 
 ## Contribute
 
