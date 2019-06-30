@@ -1,9 +1,10 @@
 # Tokui
 [![Swift Version][swift-image]][swift-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)
+[![License][license-image]][license-url]
 <!-- [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 -->
-[![License][license-image]][license-url]
+
 
 Tokui is a library with a ready to use tutorial screen that lights items, written in Swift.
 
@@ -45,7 +46,7 @@ import Tokui
 let tokui = TokuiViewController()
 
 //Lighting target Items
-tokui.add(target: button , message:"You tapped here." , location: .above)
+tokui.add(target: button , message:"You tapped here." , position: .above)
 tokui.add(target: label , message:"Tokui is a comedian of the Japanese comedy duo Tutorial.")
 
 tokui.PreparePages()
@@ -54,13 +55,48 @@ tokui.modalTransitionStyle = .crossDissolve
 self.present(tokui, animated: true, completion: nil)
 ```
 
+**You must use "PreparePages()" before "self.present"**
+
 ## Usage
 Tokui is very simple.
 
 ### Lighting items
+
+A spotlite and message Label is positioned automatically.
+
+"message" can include "\n" (line feed).
+
 ```swift
 tokui.add(target: button , message:"You tapped here." , location: .above)
-tokui.add(target: label , message:"Tokui is a comedian of the Japanese comedy duo Tutorial.")
+tokui.add(target: label , message:"Tokui is a comedian of the \n Japanese comedy duo Tutorial.")
+```
+### PreparePages
+
+```swift
+tokui.PreparePages()
+```
+<u>You must use "PreparePages()" before "self.present"</u>
+
+### Raw call to TokuiViewController
+
+```swift
+let tokui = TokuiViewController(magnification : 1.2 , alpha: 0.5 , font: UIFont.systemFont(ofSize: 18.0) ,displayDots: true ,pageControlPosition: nil)
+```
+
+### Position
+
+Enumeration 'MessagePosition' is defined as follow.
+(Default is auto.)
+
+```swift
+public enum MessagePosition
+{
+case above
+case below
+case right
+case left
+case auto
+}
 ```
 
 
