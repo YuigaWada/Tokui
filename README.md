@@ -1,12 +1,11 @@
 # Tokui
-https://qiita.com/morizotter/items/2e45f8f94c1010ebd69f
 [![Swift Version][swift-image]][swift-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License][license-image]][license-url]
 
 Tokui is a library with a ready to use tutorial screen that lights items, written in Swift.
-![](image.gif)
+<img src="image.gif" width=40%>
 
 ## Installation
 
@@ -59,7 +58,7 @@ Yuiga Wada– [@YuigaWada](https://twitter.com/YuigaWada)  :  [WebSite](https://
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/YuigaWada/Tokui](https://github.com/YuigaWada/Tokui)
 
 
 
