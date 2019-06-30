@@ -80,7 +80,11 @@ tokui.PreparePages()
 ### Raw call to TokuiViewController
 
 ```swift
-let tokui = TokuiViewController(magnification : 1.2 , alpha: 0.5 , font: UIFont.systemFont(ofSize: 18.0) ,displayDots: true ,pageControlPosition: nil)
+let tokui = TokuiViewController(magnification: 1.2,
+                                alpha: 0.5,
+                                font: .systemFont(ofSize: 18.0),
+                                displayDots: true,
+                                pageControlPosition:nil)
 ```
 
 ### Position
@@ -104,9 +108,16 @@ case auto
 
 We would love you for the contribution to **Tokui**, check the ``LICENSE`` file for more info.
 
-## Meta
 
-Yuiga Wada– [@YuigaWada](https://twitter.com/YuigaWada)  :  [WebSite](https://yuigawada.github.io/) 
+
+## Others
+
+Yuiga Wada -  [WebSite](https://yuigawada.github.io/) 
+Twitter         - [@YuigaWada](https://twitter.com/YuigaWada) 
+
+
+
+
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
