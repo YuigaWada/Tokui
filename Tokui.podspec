@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/YuigaWada/Tokui"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Yuiga Wada" => "e@mail.com" }
+  s.author             = { "Yuiga Wada" => "yuigawada@gmail.com" }
   s.social_media_url   = "https://twitter.com/YuigaWada"
   s.source       = { :git => "https://github.com/YuigaWada/Tokui.git", :tag => s.version }
   s.source_files  = "Tokui/**/*.swift"

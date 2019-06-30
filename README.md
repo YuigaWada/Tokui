@@ -5,7 +5,7 @@
 [![License][license-image]][license-url]
 
 Tokui is a library with a ready to use tutorial screen that lights items, written in Swift.
-<img src="image.gif" width=40%>
+<img src="image.gif" width=20%>
 
 ## Installation
 
