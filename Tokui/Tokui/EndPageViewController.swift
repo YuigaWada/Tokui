@@ -31,7 +31,7 @@ class EndPageViewController: UIViewController {
 
     override func loadView() {
         let nib = UINib(nibName: "EndPageViewController", bundle:Bundle(identifier: "yuwd.Tokui"))
-        self.view = nib.instantiate(withOwner: self).first as! UIView
+        self.view = nib.instantiate(withOwner: self).first as? UIView
     }
     
     
