@@ -9,21 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DACF77A22C7EA1100817AF7 /* EndPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DACF77822C7EA1100817AF7 /* EndPageViewController.swift */; };
 		8DACF77B22C7EA1100817AF7 /* EndPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DACF77922C7EA1100817AF7 /* EndPageViewController.xib */; };
-		8DBCA3F922C0D8C500878D6F /* Tokui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBCA3EF22C0D8C500878D6F /* Tokui.framework */; };
-		8DBCA3FE22C0D8C500878D6F /* TokuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCA3FD22C0D8C500878D6F /* TokuiTests.swift */; };
 		8DBCA40022C0D8C500878D6F /* Tokui.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBCA3F222C0D8C500878D6F /* Tokui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBCA40A22C0D9FE00878D6F /* TokuiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCA40922C0D9FE00878D6F /* TokuiViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8DBCA3FA22C0D8C500878D6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DBCA3E622C0D8C500878D6F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DBCA3EE22C0D8C500878D6F;
-			remoteInfo = Tokui;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8DACF77822C7EA1100817AF7 /* EndPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPageViewController.swift; sourceTree = "<group>"; };
@@ -31,9 +19,6 @@
 		8DBCA3EF22C0D8C500878D6F /* Tokui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tokui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBCA3F222C0D8C500878D6F /* Tokui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tokui.h; sourceTree = "<group>"; };
 		8DBCA3F322C0D8C500878D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DBCA3F822C0D8C500878D6F /* TokuiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokuiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DBCA3FD22C0D8C500878D6F /* TokuiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokuiTests.swift; sourceTree = "<group>"; };
-		8DBCA3FF22C0D8C500878D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBCA40922C0D9FE00878D6F /* TokuiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokuiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,14 +30,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DBCA3F522C0D8C500878D6F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DBCA3F922C0D8C500878D6F /* Tokui.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,7 +37,6 @@
 			isa = PBXGroup;
 			children = (
 				8DBCA3F122C0D8C500878D6F /* Tokui */,
-				8DBCA3FC22C0D8C500878D6F /* TokuiTests */,
 				8DBCA3F022C0D8C500878D6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				8DBCA3EF22C0D8C500878D6F /* Tokui.framework */,
-				8DBCA3F822C0D8C500878D6F /* TokuiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,15 +59,6 @@
 				8DACF77922C7EA1100817AF7 /* EndPageViewController.xib */,
 			);
 			path = Tokui;
-			sourceTree = "<group>";
-		};
-		8DBCA3FC22C0D8C500878D6F /* TokuiTests */ = {
-			isa = PBXGroup;
-			children = (
-				8DBCA3FD22C0D8C500878D6F /* TokuiTests.swift */,
-				8DBCA3FF22C0D8C500878D6F /* Info.plist */,
-			);
-			path = TokuiTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,24 +93,6 @@
 			productReference = 8DBCA3EF22C0D8C500878D6F /* Tokui.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8DBCA3F722C0D8C500878D6F /* TokuiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8DBCA40622C0D8C500878D6F /* Build configuration list for PBXNativeTarget "TokuiTests" */;
-			buildPhases = (
-				8DBCA3F422C0D8C500878D6F /* Sources */,
-				8DBCA3F522C0D8C500878D6F /* Frameworks */,
-				8DBCA3F622C0D8C500878D6F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8DBCA3FB22C0D8C500878D6F /* PBXTargetDependency */,
-			);
-			name = TokuiTests;
-			productName = TokuiTests;
-			productReference = 8DBCA3F822C0D8C500878D6F /* TokuiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,9 +106,6 @@
 					8DBCA3EE22C0D8C500878D6F = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
-					};
-					8DBCA3F722C0D8C500878D6F = {
-						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -177,7 +122,6 @@
 			projectRoot = "";
 			targets = (
 				8DBCA3EE22C0D8C500878D6F /* Tokui */,
-				8DBCA3F722C0D8C500878D6F /* TokuiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -188,13 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DACF77B22C7EA1100817AF7 /* EndPageViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DBCA3F622C0D8C500878D6F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,23 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DBCA3F422C0D8C500878D6F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DBCA3FE22C0D8C500878D6F /* TokuiTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8DBCA3FB22C0D8C500878D6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DBCA3EE22C0D8C500878D6F /* Tokui */;
-			targetProxy = 8DBCA3FA22C0D8C500878D6F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8DBCA40122C0D8C500878D6F /* Debug */ = {
@@ -406,42 +327,6 @@
 			};
 			name = Release;
 		};
-		8DBCA40722C0D8C500878D6F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TokuiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuwd.TokuiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8DBCA40822C0D8C500878D6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TokuiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuwd.TokuiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -459,15 +344,6 @@
 			buildConfigurations = (
 				8DBCA40422C0D8C500878D6F /* Debug */,
 				8DBCA40522C0D8C500878D6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8DBCA40622C0D8C500878D6F /* Build configuration list for PBXNativeTarget "TokuiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DBCA40722C0D8C500878D6F /* Debug */,
-				8DBCA40822C0D8C500878D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

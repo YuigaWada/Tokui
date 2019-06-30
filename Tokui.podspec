@@ -17,7 +17,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.swift_version = '5.0'
   s.platform     = :ios, '11.0'
-
-s.dependency 'iOSSnapshotTestCase'
-s.framework = 'XCTest'
+  s.resources    = 'Tokui/**/*.xib'
 end
